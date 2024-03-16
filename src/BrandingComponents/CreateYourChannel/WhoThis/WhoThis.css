@@ -1,0 +1,35 @@
+.whoThisLeft{
+    width: 70%;
+}
+.whoThisRight{
+    width: 30%;
+}
+.whoThisRight img{
+    width: fit-content;
+    height: 600px;
+} 
+.whoThisLeftContents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+.whoThisLeftContents div{
+    margin: 0 20px;
+}
+.whoThisLeftContents div h3{
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: #FAFAFA;
+    margin: 20px 0;
+}
+.whoThisLeftContents div p{
+    font-size: 12px;
+    color: #B7AA9B;
+    font-weight: 700;
+}
+
+.whoThisLeftContents img{
+    border-radius: 50%;
+}

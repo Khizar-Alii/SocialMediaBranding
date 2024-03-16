@@ -1,0 +1,56 @@
+.Packages{
+    height: 100%;
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    h2 {
+        text-align: center;
+        padding: 20px 0;
+    }
+    background-color: #103959;
+}
+.packagesContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.diamond {
+    opacity: 1 !important;
+    color: #FAFAFA;
+}
+.diamondContent{
+    background-color: #927559 !important;
+}
+.silverContent {
+    background-color: #D9D9D9 !important;
+}
+.silver {
+    color: #737373;
+}
+.packagesContent{
+    background-color: #737373;
+    width: 25%;
+    height: 100%;
+    padding: 20px;
+    margin: 0 5px;
+    letter-spacing: 1px;
+    line-height: 35px;
+    border-radius: 20px;
+    font-size: 12px;
+    h2 {
+        font-size: 18px;
+        color: #FAFAFA;
+        font-weight: bold;
+    }
+    p {
+        opacity: 0.5;
+    }
+    span {
+        color: #FAFAFA;
+    }
+    h3 {
+        color: #FAFAFA;
+        font-weight: bolder;
+    }
+}

@@ -1,0 +1,67 @@
+.roleModel{
+    /* background-color: #FFFFFF; */
+    background-color: #c48f7f;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+.roleModel-visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+.roleModelHeading{
+    text-align: center;
+    color: #9E8261;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+.roleModelContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.roleModelContainer img{
+    width: 100%;
+}
+.roleModelContainerleft,
+.roleModelContainerright{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    /* text-align: center; */
+    padding: 30px 0;
+}
+.roleModelContainerleft h3,
+.roleModelContainerright h3{
+    color: #9E8261;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.roleModelContainerleft p,
+.roleModelContainerright p{
+    color: #050505;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    line-height: 22px;
+}
+.roleModelContainerleft img,
+.roleModelContainerright img{
+    width: 60%;
+    background-size: cover;
+    aspect-ratio: 3/2;
+    margin: 10px 0;
+    background: transparent;
+    margin: 50px 0;
+    border-radius: 30px;
+}
+.roleModelContainermiddle{
+    width: 30%;
+}
