@@ -1,13 +1,6 @@
 .ImageWithDetails {
-  height: auto;
-  background-image: url("../assests/background2.jpg");
-  background-size: cover;
-  background-position: center;
-  object-fit: contain;
-  aspect-ratio: 3/2;
   width: 100%;
   padding-bottom: 10px;
-
 }
 .ImageWithDetailsContainer {
   display: flex;

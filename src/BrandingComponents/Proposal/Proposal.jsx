@@ -1,36 +1,44 @@
 import React from "react";
 import "./Proposal.css";
-import ProposalImage from "../../../assests/CommercialProposal.webp";
+import h3 from "../../../assests/h3.jpg";
 import cakeImage from "../../../assests/cake.webp";
 import { useInView } from "react-intersection-observer";
 
-
 const Proposal = () => {
-    const [proposalListContent, proposalListContentInView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1, 
-      });
-      const [imageProposal, imageProposalInView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1, 
-      });
+  const [proposalListContent, proposalListContentInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [imageProposal, imageProposalInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
     <div className="proposal">
+      <p className="proposal-title">
+        What does it mean <span>TO WORK WITH ME?</span>
+      </p>
       <div className="porposalContainer">
         <div className="proposalContainerLeft">
-          <p className="proposal-title">
-            What does it mean <span>TO WORK WITH ME?</span>
-          </p>
           <ul>
-            <li ref={proposalListContent} className={`proposalListContent ${proposalListContentInView ? "proposalListContent-visible" : ""}`}>
+            <li
+              ref={proposalListContent}
+              className={`proposalListContent ${
+                proposalListContentInView ? "proposalListContent-visible" : ""
+              }`}
+            >
               <img src={cakeImage} alt="" />
-
               <div>
                 <span>WE WILL CREATE YOUR UNIQUE INSTAGRAM IMAGE</span>
                 <p>The way you look, you think and you behave</p>
               </div>
             </li>
-            <li ref={proposalListContent} className={`proposalListContent ${proposalListContentInView ? "proposalListContent-visible" : ""}`}>
+            <li
+              ref={proposalListContent}
+              className={`proposalListContent ${
+                proposalListContentInView ? "proposalListContent-visible" : ""
+              }`}
+            >
               <img src={cakeImage} alt="" />
 
               <div>
@@ -41,7 +49,12 @@ const Proposal = () => {
                 </p>
               </div>
             </li>
-            <li ref={proposalListContent} className={`proposalListContent ${proposalListContentInView ? "proposalListContent-visible" : ""}`}>
+            <li
+              ref={proposalListContent}
+              className={`proposalListContent ${
+                proposalListContentInView ? "proposalListContent-visible" : ""
+              }`}
+            >
               <img src={cakeImage} alt="" />
 
               <div>
@@ -52,7 +65,12 @@ const Proposal = () => {
                 </p>
               </div>
             </li>
-            <li ref={proposalListContent} className={`proposalListContent ${proposalListContentInView ? "proposalListContent-visible" : ""}`}>
+            <li
+              ref={proposalListContent}
+              className={`proposalListContent ${
+                proposalListContentInView ? "proposalListContent-visible" : ""
+              }`}
+            >
               <img src={cakeImage} alt="" />
 
               <div>
@@ -65,10 +83,15 @@ const Proposal = () => {
                 </p>
               </div>
             </li>
-            <li ref={proposalListContent} className={`proposalListContent ${proposalListContentInView ? "proposalListContent-visible" : ""}`}>
+            <li
+              ref={proposalListContent}
+              className={`proposalListContent ${
+                proposalListContentInView ? "proposalListContent-visible" : ""
+              }`}
+            >
               <img src={cakeImage} alt="" />
 
-              <div className="contentOfProposal">
+              <div>
                 <span>WE CREATE YOUR LEGENDARY PRODUCT</span>
                 <p>
                   We look at your expertise, we study your target audience we
@@ -79,8 +102,16 @@ const Proposal = () => {
             </li>
           </ul>
         </div>
-        <div ref={imageProposal} className={`proposalContainerRight ${imageProposalInView ? "proposalContainerRight-visible" : ""}`}>
-          <img src={ProposalImage} alt="" />
+        <div
+          ref={imageProposal}
+          className={`proposalContainerRight ${
+            imageProposalInView ? "proposalContainerRight-visible" : ""
+          }`}
+        >
+          <img
+            src="https://img.freepik.com/premium-photo/colorful-horse-statue-with-black-background_777078-37996.jpg?w=740"
+            alt=""
+          />
         </div>
       </div>
     </div>

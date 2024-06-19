@@ -1,39 +1,36 @@
 .chooseRequest {
   display: flex;
-  /* background-color: #0f0f0f; */
-  background-color: #c48f7f;
-  flex-wrap: wrap;
-  height: 100vh;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
-.chooseRequest-visible{
-    opacity: 1;
+.chooseRequestContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.chooseRequest-visible {
+  opacity: 1;
   transform: translateY(0);
 }
 .chooseRequestTitle {
+  display: flex;
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
 }
-.chooseRequestContent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 /* request content */
 .requestConentMainContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  border: 1px solid grey;
+  margin: 10px;
+  border-radius: 10px;
 }
-.requestConentMainContainer-visible{
-    opacity: 1;
-    transform: translateY(0);
+.requestConentMainContainer-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .requestConentMainInnerContainer {
   display: flex;
@@ -42,49 +39,52 @@
   max-width: 500px;
   width: 100%;
   padding: 20px;
-  background-color: #000000;
-  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
-.requestConentMainInnerContainer:hover{
-    cursor: pointer;
-    transform: scale(0.98);
+.requestConentMainInnerContainer:hover {
+  cursor: pointer;
+  transform: scale(0.98);
 }
 
 .requestConentMainInnerContainerContents {
   flex: 1;
-  padding-right: 20px;
   color: #000000;
-}
-.requestConentMainInnerContainerContents h1{
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
+  h1 {
+    font-size: 18px;
+    color: var(--text-color);
     letter-spacing: 1px;
     margin-bottom: 10px;
-}
-.requestConentMainInnerContainerContents p{
+  }
+  p {
     font-size: 12px;
     color: #ffffff;
-    letter-spacing: 1px;
+    line-height: 24px;
     font-weight: 600;
+  }
 }
 .chooseRequestImage {
-  flex-shrink: 0;
-  max-width: 45%;
-  height: 200px;
+  height: 240px;
+  width: 140px;
   border-radius: 10px;
   border: none;
   outline: none;
+  padding: 0 10px;
 }
-
-@media (max-width: 768px) {
-  .requestConentMainInnerContainer {
-    flex-direction: column;
+@media screen and (max-width: 500px) {
+  .chooseRequestImage {
+    height: 200px;
+    width: 120px;
   }
   .requestConentMainInnerContainerContents {
-    padding-right: 0;
-    padding-bottom: 20px;
+    h1 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+  .requestConentMainInnerContainer {
+    padding: 10px;
   }
 }

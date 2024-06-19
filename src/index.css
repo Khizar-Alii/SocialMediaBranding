@@ -8,14 +8,13 @@
 html {
   scroll-behavior: smooth;
 }
-/* #c48f7f #103959 */
 
 :root {
   --header-height: 3.5rem;
   --first-color: hsl(28, 88%, 62%);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --body-color:   #103959;
+  --title-color: #ffffff;
+  --text-color: #9C9C9C;
+  --body-color:   #000;
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
   --h2-font-size: 1.25rem;
@@ -37,12 +36,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-.App {
-  background-image: url("../assests/background2.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  object-fit: contain;
-  aspect-ratio: 3/2;
 }

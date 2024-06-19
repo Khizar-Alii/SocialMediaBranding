@@ -1,96 +1,79 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
+  const showSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
   };
 
-  const closeMenuOnMobile = () => {
-    if (window.innerWidth <= 1150) {
-      setShowMenu(false);
-    }
+  const hideSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
   };
+
   return (
-    <header className="header">
-      <nav className="nav container">
-        {/* <Link to="/" className="nav__logo">
-          Navigation Bar
-        </Link> */}
-
-        <div
-          className={`nav__menu ${!showMenu ? "show-menu" : ""}`}
-          id="nav-menu"
-        >
-          <ul className="nav__list">
-            {/* <li className="nav__item">
-              <Link to="/" className="nav__link" onClick={closeMenuOnMobile}>
-                Home
-              </Link>
-            </li> */}
-            <li className="nav__item">
-              <Link
-                to="/"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                The Bold Moves
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link
-                to="/createyourchannel"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Creating Your Own Channel
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link
-                to="/brandRoadMap"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Brand Road Map
-              </Link>
-            </li>
-            {/* <li className="nav__item">
-              <Link
-                to="/location"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                About us
-              </Link>
-            </li> */}
-            {/* <li className="nav__item">
-              <Link to="/get-started" className="nav__link nav__cta">
-                Get Started
-              </Link>
-            </li> */}
-          </ul>
+    <nav>
+      {/* Mob Main Navbar */}
+      <ul
+        className={`${styles.sidebar} ${sidebarVisible ? styles.visible : ""}`}
+      >
+        <li onClick={hideSidebar}>
+          <IoClose className={styles.closeIcon} />
+        </li>
+        <li>
+          <Link to="/">The Bold Moves</Link>
+        </li>
+        <li>
+          <Link to="/createyourchannel">Creating Your Own Channel</Link>
+        </li>
+        <li>
+          <Link to="/brand-road-map">Brand Road Map</Link>
+        </li>
+      </ul>
+      {/* Main Navbar */}
+      <div className={styles.logoContainer}>
+      </div>
+      <ul>
+        <li className={` ${styles.dropdown} ${styles.hideOnMobile}`}>
+          <Link to="/" className={styles.homeList}>
+            The Bold Moves
+          </Link>
+        </li>
+        <li className={styles.hideOnMobile}>
+          <Link className={styles.homeList} to="/createyourchannel">
+            Creating Your Own Channel
+          </Link>
+        </li>
+        <li className={styles.hideOnMobile}>
+          <Link className={styles.homeList} to="/brand-road-map">
+            Brand Road Map
+          </Link>
+        </li>
+      </ul>
+      <div className={styles.hideOnMobile}>
+        <div className={styles.socialIcons}>
+          <Link to="https://www.instagram.com/" target="_blank">
+            <i>
+              <FaInstagram />
+            </i>
+          </Link>
+          <Link to="https://www.linkedin.com/feed/" target="_blank">
+            <i>
+              <FaLinkedin />
+            </i>
+          </Link>
         </div>
-        <div
-          className={`nav__toggle ${showMenu ? "openIcon" : ""}`}
-          id="nav-toggle"
-          onClick={toggleMenu}
-        >
+      </div>
+      <li className={styles.menuButton} onClick={showSidebar}>
+        <a>
           <IoMenu />
-        </div>
-        <div
-          className={`nav__close ${!showMenu ? "closeIcon" : ""}`}
-          id="nav-close"
-          onClick={toggleMenu}
-        >
-          <IoClose />
-        </div>
-      </nav>
-    </header>
+        </a>
+      </li>
+    </nav>
   );
 };
 

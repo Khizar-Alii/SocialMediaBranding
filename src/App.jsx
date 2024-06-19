@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/createyourchannel" element={<CreateYourChannelHero />} />
-        <Route path="/brandRoadMap" element={<BrandRoadMapHero />} />
+        <Route path="/brand-road-map" element={<BrandRoadMapHero />} />
       </Routes>
     </div>
   );

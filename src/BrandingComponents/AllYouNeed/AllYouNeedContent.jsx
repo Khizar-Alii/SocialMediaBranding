@@ -9,11 +9,8 @@ const AllYouNeedContent = ({ title, desc, img }) => {
     threshold: 0.1,
   });
   return (
-    <div ref={allYouNeedContent}
-      className={`allYouNeedContentContainer ${
-        allYouNeedContentInView ? "allYouNeedContentContainer-visible" : ""
-      }`}
-    >
+    <div ref={allYouNeedContent} className={`allYouNeedContentContainer ${
+        allYouNeedContentInView ? "allYouNeedContentContainer-visible" : ""}`}>
       <div className="allYouNeedContentWrapper">
         <section className="allYouNeedContentContainerLeft">
           <h1>{title}</h1>
