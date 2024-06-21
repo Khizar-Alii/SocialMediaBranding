@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button/Button";
 import "./Home.css";
 import { useInView } from "react-intersection-observer";
+import homePageVideo from "../../../assests/homePageVideo.mp4"
 
 import "animate.css";
 
@@ -12,9 +13,14 @@ const HomeHero = () => {
   });
   return (
     <div className="heroContainer">
+      <div className="homeHeroVideoCotainer">
+        <video autoPlay loop muted className="homeHeroVideo">
+          <source src={homePageVideo} type="video/mp4" />
+        </video>
+      </div>
       <div className="heroTop">
-        <h1>FEYABLANCHE STUDIO</h1>
-        <p>Branding · Content Creation · Online Projects Launcher</p>
+        <h1>ONORA Design STUDIO</h1>
+        <p>BRANDING · CONTENT CREATION · ONLINE PROJECTS LAUNCHER</p>
       </div>
 
       <div ref={homeContents}
@@ -24,7 +30,7 @@ const HomeHero = () => {
         </span>
         <p className="specailP">
           Gorgeous Instagram, Powerful Personal Brand, and Legendary Product -
-          Feyablanche is your all-in-one solution for monetizing your IG and
+          Onora is your all-in-one solution for monetizing your IG and
           becoming a role model for the whole market.
           Everything we create for you inevitably becomes aesthetically gorgeous
           and ideologically strong!
@@ -37,7 +43,7 @@ const HomeHero = () => {
               marginBottom: "10px",
             }}
           >
-            Get your Free Consultation Session with Feyablanche
+            Get your Free Consultation Session with Onora
           </p>
           to start your journey to success now!
         </span>

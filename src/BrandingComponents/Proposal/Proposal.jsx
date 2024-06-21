@@ -16,7 +16,7 @@ const Proposal = () => {
   return (
     <div className="proposal">
       <p className="proposal-title">
-        What does it mean <span>TO WORK WITH ME?</span>
+        What does it mean <span>TO WORK ONORA</span>
       </p>
       <div className="porposalContainer">
         <div className="proposalContainerLeft">
