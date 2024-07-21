@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./BrandingComponents/Navbar/Navbar";
 import { Home } from "./BrandingComponents/Home/Home";
-import CreateYourChannelHero from './BrandingComponents/CreateYourChannel/CreateYourChannelHero/CreateYourChannelHero';
-import BrandRoadMapHero from "./BrandingComponents/BrandRoadMap/BrandRoadMapHero/BrandRoadMapHero";
+import CreateYourChannelHero from './CreateYourChannel/CreateYourChannelHero/CreateYourChannelHero';
+import "./index.css"
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/createyourchannel" element={<CreateYourChannelHero />} />
-        <Route path="/brand-road-map" element={<BrandRoadMapHero />} />
       </Routes>
     </div>
   );

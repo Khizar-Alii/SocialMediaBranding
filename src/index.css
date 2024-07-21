@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -36,4 +34,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+@font-face{
+  font-family: "TestDomaineSansText";
+  src: url("../fonts/TestDomaineSansText-Regular-BF66174d37d7084.otf");
+}
+* {
+  font-family: TestDomaineSansText;
 }

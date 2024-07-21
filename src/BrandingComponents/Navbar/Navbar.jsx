@@ -30,9 +30,6 @@ const Navbar = () => {
         <li>
           <Link to="/createyourchannel">Creating Your Own Channel</Link>
         </li>
-        <li>
-          <Link to="/brand-road-map">Brand Road Map</Link>
-        </li>
       </ul>
       {/* Main Navbar */}
       <div className={styles.logoContainer}>
@@ -46,11 +43,6 @@ const Navbar = () => {
         <li className={styles.hideOnMobile}>
           <Link className={styles.homeList} to="/createyourchannel">
             Creating Your Own Channel
-          </Link>
-        </li>
-        <li className={styles.hideOnMobile}>
-          <Link className={styles.homeList} to="/brand-road-map">
-            Brand Road Map
           </Link>
         </li>
       </ul>

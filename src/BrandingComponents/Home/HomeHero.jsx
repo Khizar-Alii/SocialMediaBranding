@@ -26,7 +26,7 @@ const HomeHero = () => {
       <div ref={homeContents}
         className={`homeContents ${ homeContentsInView ? "homeContents-visible" : ""}`}>
         <span>
-          Transform Your Ideas & Instagram Page into <h2>a Legendary Brand</h2>
+          Transform Your Identity into <h2>a Legendary Brand</h2>
         </span>
         <p className="specailP">
           Gorgeous Instagram, Powerful Personal Brand, and Legendary Product -
@@ -38,14 +38,14 @@ const HomeHero = () => {
         <span>
           <p
             style={{
-              backgroundColor: "#9E8261",
+              backgroundColor: "#c39d42",
               color: "black",
               marginBottom: "10px",
             }}
           >
             Get your Free Consultation Session with Onora
           </p>
-          to start your journey to success now!
+          Start your journey to success now!
         </span>
         <br />
         <Button title="Get a Free Consultation" />
